@@ -27,3 +27,26 @@ function behaviors()
     );
 }
 ```
+Then, for this AR, use attribute `orderDate` instead of `order_date`.
+```php
+$model->orderDate = '27-05-2014';
+```
+equivalent with
+```php
+$model->order_date = '2014-05-27';
+```
+on your form
+```php
+$form->widget('zii.widgets.jui.CJuiDatePicker', array(
+	'model' => $model,
+	'attribute' => 'orderDate',
+	'options' => array(
+		'showAnim' => 'fold',
+		'dateFormat' => 'dd-mm-yy',
+	),
+	'htmlOptions' => array(
+		'style' => 'height:20px;',
+		'size' => '12',
+	),
+));
+```
