@@ -14,16 +14,16 @@ On your ActiveRecord class, add to method `behaviors()`:
 ```php
 function behaviors()
 {
-  return array(
-    'AutoDateFormat' => array(
-      'class' => 'ext.MdmAutoDateFormatBehavior',
-      'logicalFormat' => 'd-m-Y',
-      'physicalFormat' => 'Y-m-d',
-      'attributes' => array(
-        'orderDate' => 'order_date', // mapping attribute from logical to physical filed.
-      ),
-    ),
-    ...
-  );
+    return array(
+        'AutoDateFormat' => array(
+            'class' => 'ext.MdmAutoDateBehavior',
+            'logicalFormat' => 'd-m-Y',
+            'physicalFormat' => 'Y-m-d',
+            'attributes' => array(
+                'orderDate' => 'order_date', // mapping attribute from logical to physical filed.
+            ),
+        ),
+        ...
+    );
 }
 ```
