@@ -33,7 +33,7 @@ class MdmAutoDateBehavior extends CBehavior
         if (isset($this->attributes[$param])) {
             return $this->convertToLogical($this->owner->{$this->attributes[$param]});
         } else {
-            return parent::__get($name);
+            return parent::__get($param);
         }
     }
 
@@ -42,7 +42,7 @@ class MdmAutoDateBehavior extends CBehavior
         if (isset($this->attributes[$param])) {
             $this->owner->{$this->attributes[$param]} = $this->convertToPhysical($value);
         } else {
-            parent::__set($name, $value);
+            parent::__set($param, $value);
         }
     }
 
